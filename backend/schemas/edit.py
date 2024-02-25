@@ -9,5 +9,14 @@ from backend.database import models
 from backend.schemas import base
 
 __all__ = (
-
+    "LobbyEdit"
 )
+
+
+class LobbyEdit(base.RESTORMModel):
+    name: str
+    is_hotjoinable: bool
+    is_open: bool
+    is_running: bool
+    password: str
+    frontend_uri: str
